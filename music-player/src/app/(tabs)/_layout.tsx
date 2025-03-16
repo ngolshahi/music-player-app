@@ -64,7 +64,6 @@ const TabsNavigation = () => {
                     tabBarIcon: ({ color, focused }) => (
                         <View style={styles.iconContainer}>
                             <FontAwesome name='heart' size={focused ? 24 : 20} color={color}/>
-                            {focused && <View style={styles.activeDot} />}
                         </View>
                     ),
                 }}
@@ -76,7 +75,6 @@ const TabsNavigation = () => {
                     tabBarIcon: ({ color, focused }) => (
                         <View style={styles.iconContainer}>
                             <MaterialCommunityIcons name='playlist-play' size={focused ? 26 : 22} color={color}/>
-                            {focused && <View style={styles.activeDot} />}
                         </View>
                     ),
                 }}
@@ -88,7 +86,6 @@ const TabsNavigation = () => {
                     tabBarIcon: ({ color, focused }) => (
                         <View style={styles.iconContainer}>
                             <Ionicons name='musical-notes-sharp' size={focused ? 28 : 24} color={color}/>
-                            {focused && <View style={styles.activeDot} />}
                         </View>
                     ),
                 }}
@@ -100,7 +97,6 @@ const TabsNavigation = () => {
                     tabBarIcon: ({ color, focused }) => (
                         <View style={styles.iconContainer}>
                             <FontAwesome6 name='users-line' size={focused ? 24 : 20} color={color}/>
-                            {focused && <View style={styles.activeDot} />}
                         </View>
                     ),
                 }}
