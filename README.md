@@ -44,11 +44,11 @@ This project is still under development. Stay tuned for updates! 🚀
 
 ## 📌 To-Do List
 
-✅ Basic UI layout
-✅ Navigation setup
-🔲 Music playback functionality
-🔲 Playlist management
-🔲 UI enhancements
+✅ Basic UI layout \
+✅ Navigation setup \
+🔲 Music playback functionality \
+🔲 Playlist management \
+🔲 UI enhancements 
 
 
 
