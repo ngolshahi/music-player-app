@@ -4,24 +4,23 @@ import FastImage from "react-native-fast-image";
 import { unknownTrackImageUri } from "@/constants/images";
 import { colors, fontSize } from "@/constants/tokens";
 import { defaultStyles } from "@/styles";
+import { Track } from 'react-native-track-player';
 
 export type TrackListItemProps = {
-  track: { title: string; image?: string; artist?: string };
-  onPress?: () => void;
-  isActiveTrack?: boolean;
+  track: Track
 }
 
-export const TrackListItem = ({ track, onPress, isActiveTrack = false }: TrackListItemProps) => {
+export const TrackListItem = ({ track }: TrackListItemProps) => {
+  const isActiveTrack = false
   return (
     <TouchableHighlight
-      onPress={onPress}
       underlayColor={colors.background}
       style={styles.touchable}
     >
       <View style={styles.trackItemContainer}>
         <FastImage 
           source={{
-            uri: track.image ?? unknownTrackImageUri,
+            uri: track.artwork ?? unknownTrackImageUri,
             priority: FastImage.priority.normal
           }}
           style={[
