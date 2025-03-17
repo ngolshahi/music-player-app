@@ -20,7 +20,7 @@ export const useSetupTrackPlayer = ({onLoad} : {onLoad?: () => void}) => {
             isInitialised.current = true
             onLoad?.()
         })
-        .catch(error => {
+        .catch((error) => {
             isInitialised.current = false
             console.error(error)
         })
