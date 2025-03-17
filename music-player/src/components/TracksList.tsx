@@ -25,6 +25,7 @@ export const TracksList = ({...flatListProps }: TracksListProps) => {
   return (
     <FlatList 
       data={library}
+      contentContainerStyle={{paddingTop: 10, paddingBottom: 128}}
       ItemSeparatorComponent={ItemDivider}
       renderItem={({item : track}) => (
         <TrackListItem 
