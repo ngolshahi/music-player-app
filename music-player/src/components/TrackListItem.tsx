@@ -5,6 +5,7 @@ import { unknownTrackImageUri } from "@/constants/images";
 import { colors, fontSize } from "@/constants/tokens";
 import { defaultStyles } from "@/styles";
 import { Track, useActiveTrack } from 'react-native-track-player';
+import { Entypo, Ionicons } from '@expo/vector-icons';
 
 export type TrackListItemProps = {
   track: Track
@@ -29,23 +30,36 @@ export const TrackListItem = ({ track }: TrackListItemProps) => {
           ]}
         />
 
-        <View style={styles.textContainer}>
-          <Text 
-            numberOfLines={1}
-            style={[
-              styles.trackTitleText,
-              isActiveTrack && styles.activeTrackTitle
-            ]}
-          >
-            {track.title}
-          </Text>
-
-          {track.artist && (
-            <Text numberOfLines={1} style={styles.trackArtistText}>
-              {track.artist}
+        <View
+          style={{
+            flex: 1,
+            flexDirection: 'row',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+          }}
+        >
+          <View style={styles.textContainer}>
+            <Text 
+              numberOfLines={1}
+              style={[
+                styles.trackTitleText,
+                isActiveTrack && styles.activeTrackTitle
+              ]}
+            >
+              {track.title}
             </Text>
-          )}
+
+            {track.artist && (
+              <Text numberOfLines={1} style={styles.trackArtistText}>
+                {track.artist}
+              </Text>
+            )}
+          </View>
+
+          <Entypo name='dots-three-horizontal' size={18} color={colors.icon} />
+
         </View>
+
       </View>
     </TouchableHighlight>
   );
