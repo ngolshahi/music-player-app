@@ -14,18 +14,17 @@ type Track = {
 }
 
 export type TracksListProps = Partial<FlatListProps<Track>> & {
-  tracks?: Track[];
-  onTrackPress?: (track: Track) => void;
-  activeTrackUrl?: string; // Using URL as unique identifier instead of ID
+  tracks: any[]
 }
 const ItemDivider = () => (
   <View style={{...utilsStyles.itemSeperator, marginVertical: 9, marginLeft: 60}} />
 )
-export const TracksList = ({...flatListProps }: TracksListProps) => {
+export const TracksList = ({tracks, ...flatListProps }: TracksListProps) => {
   return (
     <FlatList 
-      data={library}
+      data={tracks}
       contentContainerStyle={{paddingTop: 10, paddingBottom: 128}}
+      ListFooterComponent={ItemDivider}
       ItemSeparatorComponent={ItemDivider}
       renderItem={({item : track}) => (
         <TrackListItem 
