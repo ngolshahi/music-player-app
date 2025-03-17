@@ -1,7 +1,8 @@
 import React from 'react';
-import { FlatList, FlatListProps } from 'react-native';
+import { FlatList, FlatListProps, View } from 'react-native';
 import library from '@/assets/data/library.json';
 import { TrackListItem } from './TrackListItem';
+import { utilsStyles } from '@/styles';
 
 // Update the Track type to match your actual data structure
 type Track = {
@@ -17,31 +18,23 @@ export type TracksListProps = Partial<FlatListProps<Track>> & {
   onTrackPress?: (track: Track) => void;
   activeTrackUrl?: string; // Using URL as unique identifier instead of ID
 }
-
-export const TracksList = ({ 
-  tracks = library, // Use library as default if no tracks provided
-  onTrackPress,
-  activeTrackUrl,
-  ...flatListProps 
-}: TracksListProps) => {
+const ItemDivider = () => (
+  <View style={{...utilsStyles.itemSeperator, marginVertical: 9, marginLeft: 60}} />
+)
+export const TracksList = ({...flatListProps }: TracksListProps) => {
   return (
     <FlatList 
-      data={tracks}
-      keyExtractor={(item) => item.url} // Use URL as the key since there's no ID
-      renderItem={({ item: track }) => (
+      data={library}
+      ItemSeparatorComponent={ItemDivider}
+      renderItem={({item : track}) => (
         <TrackListItem 
           track={{
-            title: track.title,
-            image: track.artwork,
-            artist: track.artist,
+            ...track,
+            image: track.artwork
           }}
-          isActiveTrack={activeTrackUrl === track.url}
-          onPress={() => onTrackPress?.(track)}
         />
       )}
-      showsVerticalScrollIndicator={false}
-      contentContainerStyle={{ paddingHorizontal: 16, paddingVertical: 8 }}
       {...flatListProps}
     />
-  );
-};
+  )
+}
