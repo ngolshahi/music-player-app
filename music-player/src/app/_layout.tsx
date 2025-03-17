@@ -4,11 +4,13 @@ import { SafeAreaProvider } from 'react-native-safe-area-context'
 import {SplashScreen, Stack} from 'expo-router'
 import { useSetupTrackPlayer } from '@/hooks/useSetupTrackPlayer'
 import { useCallback } from 'react'
+import { useLogTrackPlayerState } from '@/hooks/useLogTrackPlayerState'
 
 SplashScreen.preventAutoHideAsync()
 
 
 const App = () => {
+
 
 	const handleTrackPlayerLoaded = useCallback(() => {
 		SplashScreen.hideAsync()
@@ -17,6 +19,8 @@ const App = () => {
 	useSetupTrackPlayer({
 		onLoad: handleTrackPlayerLoaded,
 	})
+
+	useLogTrackPlayerState()
 
 	return <SafeAreaProvider>
 		<RootNavigation />
