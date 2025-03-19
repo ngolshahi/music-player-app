@@ -2,19 +2,22 @@ import { unknownTrackImageUri } from "@/constants/images"
 import { fontSize } from "@/constants/tokens"
 import { defaultStyles } from "@/styles"
 import React from "react"
-import { StyleSheet, TouchableOpacity, View, Text } from "react-native"
+import { StyleSheet, TouchableOpacity, View, Text, ViewProps } from "react-native"
 import FastImage from "react-native-fast-image"
-import { useActiveTrack } from "react-native-track-player"
+import { Track, useActiveTrack } from "react-native-track-player"
 import { PlayPauseButton, SkipToNextButton } from "./PlayerControls"
 
-export const FloatingPlayer = () => {
+export const FloatingPlayer = ({style} : ViewProps) => {
     const activeTrack = useActiveTrack()
 
-    if (!activeTrack) return null
+    const displayedTrack: Track = activeTrack ?? {
+        title: 'This is just a song'
+    }
 
-    const displayedTrack = activeTrack
+    if (!displayedTrack) return null
 
-    return <TouchableOpacity>
+
+    return <TouchableOpacity activeOpacity={0.9} style={[styles.container, style]}>
         <>
             <FastImage source={{
                 uri: displayedTrack.artwork ?? unknownTrackImageUri
@@ -58,4 +61,12 @@ const styles = StyleSheet.create({
         marginRight: 16,
         paddingLeft: 16,
     },
+    container: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        backgroundColor: '#252525',
+        padding: 8,
+        borderRadius: 12,
+        paddingVertical: 10,
+    }
 })
