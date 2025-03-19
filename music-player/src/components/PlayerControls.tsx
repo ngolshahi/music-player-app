@@ -1,6 +1,6 @@
 import { TouchableOpacity, View, ViewStyle } from "react-native"
 import TrackPlayer, { useIsPlaying } from "react-native-track-player"
-import { FontAwesome } from '@expo/vector-icons'
+import { FontAwesome, FontAwesome6 } from '@expo/vector-icons'
 import { colors } from "@/constants/tokens"
 
 type PlayerControlsProps = {
@@ -21,4 +21,12 @@ export const PlayPauseButton = ({style, iconSize}: PlayerButtonProps) => {
         </TouchableOpacity>
     </View>
 }
+
+export const SkipToNextButton = ({iconSize = 30}: PlayerButtonProps) => {
+
+    return <TouchableOpacity activeOpacity={0.7} onPress={() => TrackPlayer.skipToNext()}>
+        <FontAwesome6 name="forward" size={iconSize} color={colors.text} />
+    </TouchableOpacity>
+}
+
 
