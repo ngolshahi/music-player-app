@@ -1,0 +1,60 @@
+import { unknownTrackImageUri } from "@/constants/images"
+import { fontSize } from "@/constants/tokens"
+import { defaultStyles } from "@/styles"
+import React from "react"
+import { StyleSheet, TouchableOpacity, View, Text } from "react-native"
+import FastImage from "react-native-fast-image"
+import { useActiveTrack } from "react-native-track-player"
+
+export const FloatingPlayer = () => {
+    const activeTrack = useActiveTrack()
+
+    if (!activeTrack) return null
+
+    const displayedTrack = activeTrack
+
+    return <TouchableOpacity>
+        <>
+            <FastImage source={{
+                uri: displayedTrack.artwork ?? unknownTrackImageUri
+            }}
+            style = {styles.trackArtworkImage}
+            />
+
+            <View style={styles.trackTitleContainer}>
+                <Text style={styles.trackTitle}>{displayedTrack.title}</Text>
+            </View>
+
+            <View style={styles.trackControlContainer}>
+                <PlayPauseButton iconSize = {24}/>
+                <SkipToNextButton iconSize = {22}/>
+            </View>
+        </>
+    </TouchableOpacity>
+}
+
+const styles = StyleSheet.create({
+    trackArtworkImage: {
+        width: 40,
+        height: 40,
+        borderRadius: 0,
+    },
+    trackTitle: {
+        ...defaultStyles.text,
+        fontSize: 18,
+        fontWeight: '600',
+        paddingLeft: 10,
+    },
+    trackTitleContainer: {
+        flex: 1,
+        overflow: 'hidden',
+        marginLeft: 10,
+    },
+    trackControlContainer: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        columnGap: 20,
+        marginRight: 16,
+        paddingLeft: 16,
+    },
+})
