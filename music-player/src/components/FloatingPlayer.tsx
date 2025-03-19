@@ -5,6 +5,7 @@ import React from "react"
 import { StyleSheet, TouchableOpacity, View, Text } from "react-native"
 import FastImage from "react-native-fast-image"
 import { useActiveTrack } from "react-native-track-player"
+import { PlayPauseButton, SkipToNextButton } from "./PlayerControls"
 
 export const FloatingPlayer = () => {
     const activeTrack = useActiveTrack()
