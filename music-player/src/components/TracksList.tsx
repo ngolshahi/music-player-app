@@ -29,10 +29,9 @@ export const TracksList = ({tracks, ...flatListProps }: TracksListProps) => {
       ListEmptyComponent={<View>
         <Text style={utilsStyles.emptyContentText}>No songs found</Text>
 
-        <FastImage>
+        <FastImage
           source={{ uri : unknownTrackImageUri, priority: FastImage.priority.normal}}
-          style={utilsStyles.emptyContentImage}
-        </FastImage>
+          style={utilsStyles.emptyContentImage} />
       </View>}
       renderItem={({item : track}) => (
         <TrackListItem 
