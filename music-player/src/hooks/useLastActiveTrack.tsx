@@ -9,4 +9,6 @@ export const useLastActiveTrack = () => {
         if (!activeTrack) return
         setLastActiveTrack(activeTrack)
     }, [activeTrack])
+
+    return lastActiveTrack
 }
