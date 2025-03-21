@@ -70,7 +70,7 @@
     "playlist": ["Some Sexy Songs 4 U"]
   },
   {
-    "url": "",
+    "url": "http://localhost:8000/some-sexy-songs-4-u/11.%20RAINING%20IN%20HOUSTON.mp3",
     "title": "RAINING IN HOUSTON",
     "artist": "Drake",
     "artwork": "https://upload.wikimedia.org/wikipedia/en/6/6a/PartyNextDoor_and_Drake_-_Some_Sexy_Songs_4_U.png",
