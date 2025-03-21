@@ -37,9 +37,9 @@ export const TrackListItem = ({ track, onTrackSelect: handleTrackSelect }: Track
 
         {isActiveTrack && 
           (playing ? (
-            <LoaderKit name='LineScaleParty' color={colors.icon} /> 
+            <LoaderKit style={styles.trackPlayingIconIndicator} name='LineScaleParty' color={colors.icon} /> 
           ) : (
-            <Ionicons name='play' size={24} color={colors.icon} />
+            <Ionicons style={styles.trackPlayingIconIndicator} name='play' size={24} color={colors.icon} />
           ))}
 
         <View
@@ -122,4 +122,11 @@ const styles = StyleSheet.create({
     fontSize: 14,
     marginTop: 4,
   },
+  trackPlayingIconIndicator: {
+    position: 'absolute',
+    top: 18,
+    left: 16,
+    width: 16,
+    height: 16
+  }
 });
