@@ -4,6 +4,8 @@ import library from '@/assets/data/library.json';
 import { TrackListItem } from './TrackListItem';
 import { utilsStyles } from '@/styles';
 import TrackPlayer, { Track } from 'react-native-track-player'
+import FastImage from 'react-native-fast-image';
+import { unknownTrackImageUri } from '@/constants/images';
 
 export type TracksListProps = Partial<FlatListProps<Track>> & {
   tracks: Track[]
@@ -26,6 +28,11 @@ export const TracksList = ({tracks, ...flatListProps }: TracksListProps) => {
       ItemSeparatorComponent={ItemDivider}
       ListEmptyComponent={<View>
         <Text style={utilsStyles.emptyContentText}>No songs found</Text>
+
+        <FastImage>
+          source={{ uri : unknownTrackImageUri, priority: FastImage.priority.normal}}
+          style={utilsStyles.emptyContentImage}
+        </FastImage>
       </View>}
       renderItem={({item : track}) => (
         <TrackListItem 
