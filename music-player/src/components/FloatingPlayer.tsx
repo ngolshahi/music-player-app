@@ -12,9 +12,7 @@ export const FloatingPlayer = ({style} : ViewProps) => {
     const activeTrack = useActiveTrack()
     const lastActiveTrack = useLastActiveTrack()
 
-    const displayedTrack: Track = activeTrack ?? {
-        title: 'This is just a song'
-    }
+    const displayedTrack = activeTrack ?? lastActiveTrack
 
     if (!displayedTrack) return null
 
