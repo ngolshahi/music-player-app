@@ -7,63 +7,63 @@
     "playlist": ["Some Sexy Songs 4 U"]
   },
   {
-    "url": "http://[::]:8000/some-sexy-songs-4-u/02.%20MOTH%20BALLS.mp3",
+    "url": "http://localhost:8000/some-sexy-songs-4-u/02.%20MOTH%20BALLS.mp3",
     "title": "MOTH BALLS",
     "artist": "Drake & PARTYNEXTDOOR",
     "artwork": "https://upload.wikimedia.org/wikipedia/en/6/6a/PartyNextDoor_and_Drake_-_Some_Sexy_Songs_4_U.png",
     "playlist": ["Some Sexy Songs 4 U"]
   },
   {
-    "url": "http://[::]:8000/some-sexy-songs-4-u/03.%20SOMETHING%20ABOUT%20YOU.mp3",
+    "url": "http://localhost:8000/some-sexy-songs-4-u/03.%20SOMETHING%20ABOUT%20YOU.mp3",
     "title": "SOMETHING ABOUT YOU",
     "artist": "Drake & PARTYNEXTDOOR",
     "artwork": "https://upload.wikimedia.org/wikipedia/en/6/6a/PartyNextDoor_and_Drake_-_Some_Sexy_Songs_4_U.png",
     "playlist": ["Some Sexy Songs 4 U"]
   },
   {
-    "url": "http://[::]:8000/some-sexy-songs-4-u/04.%20CRYING%20IN%20CHANEL.mp3",
+    "url": "http://localhost:8000/some-sexy-songs-4-u/04.%20CRYING%20IN%20CHANEL.mp3",
     "title": "CRYING IN CHANEL",
     "artist": "Drake",
     "artwork": "https://upload.wikimedia.org/wikipedia/en/6/6a/PartyNextDoor_and_Drake_-_Some_Sexy_Songs_4_U.png",
     "playlist": ["Some Sexy Songs 4 U"]
   },
   {
-    "url": "http://[::]:8000/some-sexy-songs-4-u/05.%20SPIDER-MAN%20SUPERMAN.mp3",
+    "url": "http://localhost:8000/some-sexy-songs-4-u/05.%20SPIDER-MAN%20SUPERMAN.mp3",
     "title": "SPIDER-MAN SUPERMAN",
     "artist": "Drake & PARTYNEXTDOOR",
     "artwork": "https://upload.wikimedia.org/wikipedia/en/6/6a/PartyNextDoor_and_Drake_-_Some_Sexy_Songs_4_U.png",
     "playlist": ["Some Sexy Songs 4 U"]
   },
   {
-    "url": "http://[::]:8000/some-sexy-songs-4-u/06.%20DEEPER.mp3",
+    "url": "http://localhost:8000/some-sexy-songs-4-u/06.%20DEEPER.mp3",
     "title": "DEEPER",
     "artist": "PARTYNEXTDOOR",
     "artwork": "https://upload.wikimedia.org/wikipedia/en/6/6a/PartyNextDoor_and_Drake_-_Some_Sexy_Songs_4_U.png",
     "playlist": ["Some Sexy Songs 4 U"]
   },
   {
-    "url": "http://[::]:8000/some-sexy-songs-4-u/07.%20SMALL%20TOWN%20FAME.mp3",
+    "url": "http://localhost:8000/some-sexy-songs-4-u/07.%20SMALL%20TOWN%20FAME.mp3",
     "title": "SMALL TOWN FAME",
     "artist": "Drake",
     "artwork": "https://upload.wikimedia.org/wikipedia/en/6/6a/PartyNextDoor_and_Drake_-_Some_Sexy_Songs_4_U.png",
     "playlist": ["Some Sexy Songs 4 U"]
   },
   {
-    "url": "http://[::]:8000/some-sexy-songs-4-u/08.%20PIMMIE%27S%20DILEMMA.mp3",
+    "url": "http://localhost:8000/some-sexy-songs-4-u/08.%20PIMMIE%27S%20DILEMMA.mp3",
     "title": "PIMMIE'S DILEMMA",
     "artist": "Pimmie, PARTYNEXTDOOR & Drake",
     "artwork": "https://upload.wikimedia.org/wikipedia/en/6/6a/PartyNextDoor_and_Drake_-_Some_Sexy_Songs_4_U.png",
     "playlist": ["Some Sexy Songs 4 U"]
   },
   {
-    "url": "http://[::]:8000/some-sexy-songs-4-u/09.%20BRIAN%20STEEL.mp3",
+    "url": "http://localhost:8000/some-sexy-songs-4-u/09.%20BRIAN%20STEEL.mp3",
     "title": "BRIAN STEELE",
     "artist": "Drake",
     "artwork": "https://upload.wikimedia.org/wikipedia/en/6/6a/PartyNextDoor_and_Drake_-_Some_Sexy_Songs_4_U.png",
     "playlist": ["Some Sexy Songs 4 U"]
   },
   {
-    "url": "http://[::]:8000/some-sexy-songs-4-u/10.%20GIMME%20A%20HUG.mp3",
+    "url": "http://localhost:8000/some-sexy-songs-4-u/10.%20GIMME%20A%20HUG.mp3",
     "title": "GIMME A HUG",
     "artist": "Drake",
     "artwork": "https://upload.wikimedia.org/wikipedia/en/6/6a/PartyNextDoor_and_Drake_-_Some_Sexy_Songs_4_U.png",
@@ -77,70 +77,70 @@
     "playlist": ["Some Sexy Songs 4 U"]
   },
   {
-    "url": "http://[::]:8000/some-sexy-songs-4-u/12.%20LASERS.mp3",
+    "url": "http://localhost:8000/some-sexy-songs-4-u/12.%20LASERS.mp3",
     "title": "LASERS",
     "artist": "Drake & PARTYNEXTDOOR",
     "artwork": "https://upload.wikimedia.org/wikipedia/en/6/6a/PartyNextDoor_and_Drake_-_Some_Sexy_Songs_4_U.png",
     "playlist": ["Some Sexy Songs 4 U"]
   },
   {
-    "url": "http://[::]:8000/some-sexy-songs-4-u/13.%20MEET%20YOUR%20PADRE.mp3",
+    "url": "http://localhost:8000/some-sexy-songs-4-u/13.%20MEET%20YOUR%20PADRE.mp3",
     "title": "MEET YOUR PADRE",
     "artist": "PARTYNEXTDOOR, Drake & Chino Pacas",
     "artwork": "https://upload.wikimedia.org/wikipedia/en/6/6a/PartyNextDoor_and_Drake_-_Some_Sexy_Songs_4_U.png",
     "playlist": ["Some Sexy Songs 4 U"]
   },
   {
-    "url": "http://[::]:8000/some-sexy-songs-4-u/14.%20NOKIA.mp3",
+    "url": "http://localhost:8000/some-sexy-songs-4-u/14.%20NOKIA.mp3",
     "title": "NOKIA",
     "artist": "Drake",
     "artwork": "https://upload.wikimedia.org/wikipedia/en/6/6a/PartyNextDoor_and_Drake_-_Some_Sexy_Songs_4_U.png",
     "playlist": ["Some Sexy Songs 4 U"]
   },
   {
-    "url": "http://[::]:8000/some-sexy-songs-4-u/15.%20DIE%20TRYING.mp3",
+    "url": "http://localhost:8000/some-sexy-songs-4-u/15.%20DIE%20TRYING.mp3",
     "title": "DIE TRYING",
     "artist": "PARTYNEXTDOOR, Drake & Yebba",
     "artwork": "https://upload.wikimedia.org/wikipedia/en/6/6a/PartyNextDoor_and_Drake_-_Some_Sexy_Songs_4_U.png",
     "playlist": ["Some Sexy Songs 4 U"]
   },
   {
-    "url": "http://[::]:8000/some-sexy-songs-4-u/16.%20SOMEBODY%20LOVES%20ME.mp3",
+    "url": "http://localhost:8000/some-sexy-songs-4-u/16.%20SOMEBODY%20LOVES%20ME.mp3",
     "title": "SOMEBODY LOVES ME",
     "artist": "Drake & PARTYNEXTDOOR",
     "artwork": "https://upload.wikimedia.org/wikipedia/en/6/6a/PartyNextDoor_and_Drake_-_Some_Sexy_Songs_4_U.png",
     "playlist": ["Some Sexy Songs 4 U"]
   },
   {
-    "url": "http://[::]:8000/some-sexy-songs-4-u/17.%20CELIBACY.mp3",
+    "url": "http://localhost:8000/some-sexy-songs-4-u/17.%20CELIBACY.mp3",
     "title": "CELIBACY",
     "artist": "Drake & PARTYNEXTDOOR",
     "artwork": "https://upload.wikimedia.org/wikipedia/en/6/6a/PartyNextDoor_and_Drake_-_Some_Sexy_Songs_4_U.png",
     "playlist": ["Some Sexy Songs 4 U"]
   },
   {
-    "url": "http://[::]:8000/some-sexy-songs-4-u/18.%20OMW.mp3",
+    "url": "http://localhost:8000/some-sexy-songs-4-u/18.%20OMW.mp3",
     "title": "OMW",
     "artist": "Drake & PARTYNEXTDOOR",
     "artwork": "https://upload.wikimedia.org/wikipedia/en/6/6a/PartyNextDoor_and_Drake_-_Some_Sexy_Songs_4_U.png",
     "playlist": ["Some Sexy Songs 4 U"]
   },
   {
-    "url": "http://[::]:8000/some-sexy-songs-4-u/19.%20GLORIOUS.mp3",
+    "url": "http://localhost:8000/some-sexy-songs-4-u/19.%20GLORIOUS.mp3",
     "title": "GLORIOUS",
     "artist": "Drake & PARTYNEXTDOOR",
     "artwork": "https://upload.wikimedia.org/wikipedia/en/6/6a/PartyNextDoor_and_Drake_-_Some_Sexy_Songs_4_U.png",
     "playlist": ["Some Sexy Songs 4 U"]
   },
   {
-    "url": "http://[::]:8000/some-sexy-songs-4-u/20.%20WHEN%20HE%27S%20GONE.mp3",
+    "url": "http://localhost:8000/some-sexy-songs-4-u/20.%20WHEN%20HE%27S%20GONE.mp3",
     "title": "WHEN HE'S GONE",
     "artist": "Drake & PARTYNEXTDOOR",
     "artwork": "https://upload.wikimedia.org/wikipedia/en/6/6a/PartyNextDoor_and_Drake_-_Some_Sexy_Songs_4_U.png",
     "playlist": ["Some Sexy Songs 4 U"]
   },
   {
-    "url": "http://[::]:8000/some-sexy-songs-4-u/21.%20GREEDY.mp3",
+    "url": "http://localhost:8000/some-sexy-songs-4-u/21.%20GREEDY.mp3",
     "title": "GREEDY",
     "artist": "Drake & PARTYNEXTDOOR",
     "artwork": "https://upload.wikimedia.org/wikipedia/en/6/6a/PartyNextDoor_and_Drake_-_Some_Sexy_Songs_4_U.png",
