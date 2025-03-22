@@ -22,7 +22,15 @@ const DismissPlayerSymbol = () => {
         justifyContent: 'center'
     }}>
 
-        
+        <View accessible={false} style={{
+            width: 50,
+            height: 8, 
+            borderRadius: 8,
+            backgroundColor: '#fff',
+            opacity: 0.7
+        }} />
+
+
     </View>
 }
 
