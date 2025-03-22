@@ -1,3 +1,4 @@
+import { MovingText } from "@/components/MovingText"
 import { unknownTrackImageUri } from "@/constants/images"
 import { colors, screenPadding } from "@/constants/tokens"
 import { defaultStyles } from "@/styles"
@@ -26,6 +27,18 @@ const PlayerScreen = () => {
                         uri: activeTrack.artwork ?? unknownTrackImageUri,
                         priority: FastImage.priority.high
                     }} resizeMode="cover" style={styles.artworkImage} />
+                </View>
+
+                <View style={{flex: 1}}>
+                    <View style={{marginTop: 'auto'}}>
+                        <View style={{height:60}}>
+                            <View style={{flexDirection: 'row', justifyContent:'space-between', alignItems: 'center',}}>
+                                <View style={styles.trackTitleContainer}>
+                                    <MovingText text={activeTrack.title ?? ''} animationThreshold={30} style={styles.trackTitleText}/>
+                                </View>
+                            </View>
+                        </View>
+                    </View>
                 </View>
                 
             </View>
@@ -78,6 +91,15 @@ const styles = StyleSheet.create({
         height: '100%',
         resizeMode: 'cover',
         borderRadius: 12,
+    },
+    trackTitleContainer: {
+        flex: 1,
+        overflow:'hidden',
+    },
+    trackTitleText: {
+        ...defaultStyles.text,
+        fontSize: 22,
+        fontWeight: '700',
     }
 })
 
