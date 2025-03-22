@@ -7,6 +7,8 @@ import { useActiveTrack } from "react-native-track-player"
 const PlayerScreen = () => {
     const activeTrack = useActiveTrack()
 
+    const {top, bottom} = useSafeAreaInsets()
+
     if(!activeTrack) {
         return <View style={[defaultStyles.container, {justifyContent: 'center'}]}>
             <ActivityIndicator color={colors.icon} />
@@ -14,9 +16,11 @@ const PlayerScreen = () => {
     }
     return <View style={styles.overlayContainer} >
 
-        <DismissPlayerSymbol />
+            <DismissPlayerSymbol />
 
-        
+            <View style={{flex: 1, marginTop: top + 70, marginBottom: bottom }}>
+                
+            </View>
         </View>
 }
 
