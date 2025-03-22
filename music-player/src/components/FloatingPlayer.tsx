@@ -11,13 +11,15 @@ import { MovingText } from "./MovingText"
 import { useRouter } from "expo-router"
 
 export const FloatingPlayer = ({style} : ViewProps) => {
-    const route = useRouter()
+    const router = useRouter()
     const activeTrack = useActiveTrack()
     const lastActiveTrack = useLastActiveTrack()
 
     const displayedTrack = activeTrack ?? lastActiveTrack
 
-    const 
+    const handlePress = () => {
+        router.navigate('/player')
+    }
 
     if (!displayedTrack) return null
 
