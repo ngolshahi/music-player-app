@@ -1,12 +1,22 @@
-import { screenPadding } from "@/constants/tokens"
+import { colors, screenPadding } from "@/constants/tokens"
 import { defaultStyles } from "@/styles"
-import { View, StyleSheet } from "react-native"
+import { View, StyleSheet, ActivityIndicator } from "react-native"
 import { useSafeAreaInsets } from "react-native-safe-area-context"
+import { useActiveTrack } from "react-native-track-player"
 
 const PlayerScreen = () => {
+    const activeTrack = useActiveTrack()
+
+    if(!activeTrack) {
+        return <View style={[defaultStyles.container, {justifyContent: 'center'}]}>
+            <ActivityIndicator color={colors.icon} />
+        </View>
+    }
     return <View style={styles.overlayContainer} >
 
         <DismissPlayerSymbol />
+
+        
         </View>
 }
 
