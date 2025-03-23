@@ -10,3 +10,5 @@ export type Artist = {
     name: string
     tracks: Track[]
 }
+
+export type TrackWithPlaylist = Track & {playlist?:string[]}
