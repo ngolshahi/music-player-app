@@ -12,6 +12,8 @@ import { FontAwesome } from '@expo/vector-icons'
 const PlayerScreen = () => {
     const activeTrack = useActiveTrack()
 
+    const {isFavorite, toggleFavorite} = useTrackPlayerFavorite()
+
     const {top, bottom} = useSafeAreaInsets()
 
     if(!activeTrack) {
