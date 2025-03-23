@@ -2,10 +2,12 @@ import { MovingText } from "@/components/MovingText"
 import { unknownTrackImageUri } from "@/constants/images"
 import { colors, screenPadding } from "@/constants/tokens"
 import { defaultStyles } from "@/styles"
+import React from "react"
 import { View, StyleSheet, ActivityIndicator } from "react-native"
 import FastImage from "react-native-fast-image"
 import { useSafeAreaInsets } from "react-native-safe-area-context"
 import { useActiveTrack } from "react-native-track-player"
+import { FontAwesome } from '@expo/vector-icons'
 
 const PlayerScreen = () => {
     const activeTrack = useActiveTrack()
@@ -36,6 +38,14 @@ const PlayerScreen = () => {
                                 <View style={styles.trackTitleContainer}>
                                     <MovingText text={activeTrack.title ?? ''} animationThreshold={30} style={styles.trackTitleText}/>
                                 </View>
+
+                                <FontAwesome
+                                    name={isFavorite ? 'heart' : 'heart-o'}
+                                    size={20}
+                                    color={isFavorite ? colors.primary : colors.icon}
+                                    style={{marginHorizontal: 14}}
+                                    onPress={toggleFavorite}
+                                />
                             </View>
                         </View>
                     </View>
