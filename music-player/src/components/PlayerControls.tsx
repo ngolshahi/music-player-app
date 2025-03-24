@@ -12,6 +12,18 @@ type PlayerButtonProps = {
     iconSize?: number
 }
 
+export const PlayerControls = ({style} : PlayerControlsProps) => {
+    return <View style={[styles.container, style]}>
+        <View style={styles.row}>
+            <SkipToPreviousButton />
+
+            <PlayPauseButton/>
+
+            <SkipToNextButton/>
+        </View>
+    </View>
+}
+
 export const PlayPauseButton = ({style, iconSize}: PlayerButtonProps) => {
     const {playing} = useIsPlaying()
 
@@ -39,5 +51,6 @@ export const SkipToPreviousButton = ({iconSize = 30}: PlayerButtonProps) => {
         <FontAwesome6 name={"backward"} size={iconSize} color={colors.text} />
     </TouchableOpacity>
 }
+
 
 
