@@ -57,6 +57,10 @@ const PlayerScreen = () => {
                                     </Text>
                             )}
                         </View>
+
+                        <PlayerProgressBar style={{marginTop: 32}} />
+
+                        
                     </View>
                 </View>
                 
