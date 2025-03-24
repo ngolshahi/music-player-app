@@ -65,7 +65,7 @@ const PlayerScreen = () => {
 
                     <PlayerVolumeBar style={{marginTop: 'auto', marginBottom: 30}} />
                     
-                    <View>
+                    <View style={{utilsStyles.centeredRow}} >
                         <PlayerRepeatToggle size={30} style={{marginBottom: 6}} />
                     </View>
                 </View>
