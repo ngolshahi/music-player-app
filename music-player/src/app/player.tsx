@@ -62,6 +62,8 @@ const PlayerScreen = () => {
 
                         <PlayerControls style={{marginTop: 40}}/>
                     </View>
+
+                    <PlayerVolumeBar style={{marginTop: 'auto', marginBottom: 30}} />
                 </View>
                 
             </View>
