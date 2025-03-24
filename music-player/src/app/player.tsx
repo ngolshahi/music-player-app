@@ -48,14 +48,14 @@ const PlayerScreen = () => {
                                     style={{marginHorizontal: 14}}
                                     onPress={toggleFavorite}
                                 />
+                            </View>
 
-                                {activeTrack.artist && (
-                                    <Text numberOfLines={1} style={{styles.trackArtistText, {
-                                        marginTop: 6}}}>
+                            {activeTrack.artist && (
+                                    <Text numberOfLines={1} style={[styles.trackArtistText, {
+                                        marginTop: 6}]}>
                                         {activeTrack.artist}
                                     </Text>
-                                )}
-                            </View>
+                            )}
                         </View>
                     </View>
                 </View>
