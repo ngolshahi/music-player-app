@@ -5,6 +5,7 @@ import {SplashScreen, Stack} from 'expo-router'
 import { useSetupTrackPlayer } from '@/hooks/useSetupTrackPlayer'
 import { useCallback } from 'react'
 import { useLogTrackPlayerState } from '@/hooks/useLogTrackPlayerState'
+import { GestureHandlerRootView } from 'react-native-gesture-handler'
 
 SplashScreen.preventAutoHideAsync()
 
@@ -23,9 +24,12 @@ const App = () => {
 	useLogTrackPlayerState()
 
 	return <SafeAreaProvider>
-		<RootNavigation />
+		<GestureHandlerRootView style={{flex: 1}}>
+			<RootNavigation />
 
-		<StatusBar style='auto'/>
+			<StatusBar style='auto'/>
+		</GestureHandlerRootView>
+		
 	</SafeAreaProvider>
 }
 
