@@ -1,9 +1,9 @@
 import { MovingText } from "@/components/MovingText"
 import { unknownTrackImageUri } from "@/constants/images"
-import { colors, screenPadding } from "@/constants/tokens"
+import { colors, fontSize, screenPadding } from "@/constants/tokens"
 import { defaultStyles } from "@/styles"
 import React from "react"
-import { View, StyleSheet, ActivityIndicator } from "react-native"
+import { View, StyleSheet, ActivityIndicator, Text } from "react-native"
 import FastImage from "react-native-fast-image"
 import { useSafeAreaInsets } from "react-native-safe-area-context"
 import { useActiveTrack } from "react-native-track-player"
@@ -48,6 +48,13 @@ const PlayerScreen = () => {
                                     style={{marginHorizontal: 14}}
                                     onPress={toggleFavorite}
                                 />
+
+                                {activeTrack.artist && (
+                                    <Text numberOfLines={1} style={{styles.trackArtistText, {
+                                        marginTop: 6}}}>
+                                        {activeTrack.artist}
+                                    </Text>
+                                )}
                             </View>
                         </View>
                     </View>
@@ -112,7 +119,13 @@ const styles = StyleSheet.create({
         ...defaultStyles.text,
         fontSize: 22,
         fontWeight: '700',
-    }
+    },
+    trackArtistText: {
+        ...defaultStyles.text,
+        fontSize: fontSize.base,
+        opacity: 0.8,
+        maxWidth: '90%',
+    },
 })
 
 export default PlayerScreen
