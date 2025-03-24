@@ -1,7 +1,7 @@
 import { MovingText } from "@/components/MovingText"
 import { unknownTrackImageUri } from "@/constants/images"
 import { colors, fontSize, screenPadding } from "@/constants/tokens"
-import { defaultStyles } from "@/styles"
+import { defaultStyles, utilsStyles } from "@/styles"
 import React from "react"
 import { View, StyleSheet, ActivityIndicator, Text } from "react-native"
 import FastImage from "react-native-fast-image"
@@ -65,7 +65,7 @@ const PlayerScreen = () => {
 
                     <PlayerVolumeBar style={{marginTop: 'auto', marginBottom: 30}} />
                     
-                    <View style={{utilsStyles.centeredRow}} >
+                    <View style={utilsStyles.centeredRow} >
                         <PlayerRepeatToggle size={30} style={{marginBottom: 6}} />
                     </View>
                 </View>
