@@ -4,8 +4,8 @@ const repeatOrder = [
     RepeatMode.Off,
     RepeatMode.Track,
     RepeatMode.Queue,
-]
+] as const
 
 export const PlayerRepeatToggle = () => {
-
+    
 }
