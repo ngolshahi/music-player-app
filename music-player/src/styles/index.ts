@@ -36,4 +36,8 @@ export const utilsStyles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
     },
+    slider: {
+        height: 7,
+        borderRadius: 16,
+    }
 })
