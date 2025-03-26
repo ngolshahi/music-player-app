@@ -13,6 +13,8 @@ export const PlayerVolumeBar = ({style}: ViewProps) => {
     const min = useSharedValue(0)
     const max = useSharedValue(1)
 
+    progress.value = volume ?? 0
+
     return <View style={style}>
         <View style={{flexDirection: 'row', alignItems: 'center'}}>
             <Ionicons name="volume-low" size={20} color={colors.icon} style={{opacity: 0.8}} />
