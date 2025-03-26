@@ -26,16 +26,8 @@ export const PlayerVolumeBar = ({style}: ViewProps) => {
                             minimumTrackTintColor: colors.minimumTrackTintColor,
                             maximumTrackTintColor: colors.maximumTrackTintColor,
                         }}
-                        onSlidingStart={() => (isSliding.value = true)}
-                        onValueChange={async(value) => {
-                            await TrackPlayer.seekTo(value * duration)
-                        }}
-                        onSlidingComplete={async(value) => {
-                            if(!isSliding.value) return
-            
-                            isSliding.value = false
-            
-                            await TrackPlayer.seekTo(value * duration)
+                        onValueChange={(value) => {
+                            updateVolume(value)
                         }}
                     />
         </View>
