@@ -9,6 +9,8 @@ import { useSafeAreaInsets } from "react-native-safe-area-context"
 import { useActiveTrack } from "react-native-track-player"
 import { FontAwesome } from '@expo/vector-icons'
 import { PlayerControls } from "@/components/PlayerControls"
+import { PlayerProgressBar } from "@/components/PlayerProgressBar"
+import { PlayerVolumeBar } from "@/components/PlayerVolumeBar"
 
 const PlayerScreen = () => {
     const activeTrack = useActiveTrack()
