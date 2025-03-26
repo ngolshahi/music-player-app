@@ -4,7 +4,7 @@ import { utilsStyles } from "@/styles";
 import { View, ViewProps } from "react-native";
 import { Slider } from "react-native-awesome-slider";
 import { useSharedValue } from "react-native-reanimated";
-import { useProgress } from "react-native-track-player";
+import TrackPlayer, { useProgress } from "react-native-track-player";
 
 export const PlayerProgressBar = ({style}: ViewProps) => {
     const {duration, position} = useProgress(250)
@@ -27,10 +27,15 @@ export const PlayerProgressBar = ({style}: ViewProps) => {
             minimumValue={min}
             maximumValue={max}
             containerStyle={utilsStyles.slider}
-
+            thumbWidth={0}
+            renderBubble={() => null}
             theme = {{
                 minimumTrackTintColor: colors.minimumTrackTintColor,
                 maximumTrackTintColor: colors.maximumTrackTintColor,
+            }}
+            onSlidingStart={() => (isSliding.value = true)}
+            onValueChange={async(value) => {
+                await TrackPlayer.seekTo(value * duration)
             }}
         />
 
