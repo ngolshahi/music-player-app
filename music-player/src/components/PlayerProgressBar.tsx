@@ -15,6 +15,10 @@ export const PlayerProgressBar = ({style}: ViewProps) => {
     const trackElapsedTime = formatSecondsToMinutes(position)
     const trackRenamingTime = formatSecondsToMinutes(duration - position)
 
+    if (!isSliding.value) {
+        progress.value = duration > 0 ? position / duration : 0
+    }
+
     return <View style={style}>
         <Slider 
             progress={0}
