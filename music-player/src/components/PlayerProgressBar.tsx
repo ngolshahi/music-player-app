@@ -1,9 +1,10 @@
-import { colors } from "@/constants/tokens";
+import { colors, fontSize } from "@/constants/tokens";
 import { formatSecondsToMinutes } from "@/helpers/miscellaneous";
-import { utilsStyles } from "@/styles";
-import { View, ViewProps, Text } from "react-native";
+import { defaultStyles, utilsStyles } from "@/styles";
+import { View, ViewProps, Text, StyleSheet } from "react-native";
 import { Slider } from "react-native-awesome-slider";
 import { useSharedValue } from "react-native-reanimated";
+import { opacity } from "react-native-reanimated/lib/typescript/Colors";
 import TrackPlayer, { useProgress } from "react-native-track-player";
 
 export const PlayerProgressBar = ({style}: ViewProps) => {
@@ -47,8 +48,25 @@ export const PlayerProgressBar = ({style}: ViewProps) => {
         />
 
         <View>
-            <Text style={StyleSheet.timeText}>{trackElapsedTime}</Text>
+            <Text style={styles.timeText}>{trackElapsedTime}</Text>
         </View>
 
     </View>
 }
+
+const styles = StyleSheet.create({
+    timeRow: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'baseline',
+        marginTop: 20,
+    },
+    timeText: {
+        ...defaultStyles.text,
+        color: colors.text,
+        opacity: 0.75,
+        fontSize: fontSize.xs,
+        letterSpacing: 0.7,
+        fontWeight: '500',
+    }
+})
