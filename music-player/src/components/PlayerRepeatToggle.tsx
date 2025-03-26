@@ -4,6 +4,8 @@ import { ComponentProps } from "react"
 import { MaterialCommunityIcons } from '@expo/vector-icons'
 
 
+type IconProps = Omit<ComponentProps<typeof MaterialCommunityIcons>, 'name'>
+
 type IconName = ComponentProps<typeof MaterialCommunityIcons>['name']
 
 const repeatOrder = [
@@ -12,8 +14,15 @@ const repeatOrder = [
     RepeatMode.Queue,
 ] as const
 
-export const PlayerRepeatToggle = () => {
-    const repeatMode = RepeatMode.Off
+export const PlayerRepeatToggle = ({...iconProps} : IconProps) => {
+    const repeatMode = useTrackPlayerRepeatMode()
 
     const icon = match(repeatMode).returnType<IconName>()
+    .with(RepeatMode.Off, () => 'repeat-off')
+    .with(RepeatMode.Track, () => 'repeat-once')
+    .with(RepeatMode.Queue, () => 'repeat')
+    .otherwise('repeat-off')
+
+    return <MaterialCommunityIcons name={icon} onPress={toggleRepeatMode} color={colors.icon} {...iconProps} />
+
 }
