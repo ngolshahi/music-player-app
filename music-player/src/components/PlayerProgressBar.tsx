@@ -1,4 +1,6 @@
+import { colors } from "@/constants/tokens";
 import { formatSecondsToMinutes } from "@/helpers/miscellaneous";
+import { utilsStyles } from "@/styles";
 import { View, ViewProps } from "react-native";
 import { Slider } from "react-native-awesome-slider";
 import { useSharedValue } from "react-native-reanimated";
@@ -24,6 +26,12 @@ export const PlayerProgressBar = ({style}: ViewProps) => {
             progress={progress}
             minimumValue={min}
             maximumValue={max}
+            containerStyle={utilsStyles.slider}
+
+            theme = {{
+                minimumTrackTintColor: colors.minimumTrackTintColor,
+                maximumTrackTintColor: colors.maximumTrackTintColor,
+            }}
         />
 
     </View>
