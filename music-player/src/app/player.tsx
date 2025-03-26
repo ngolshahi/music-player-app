@@ -17,7 +17,8 @@ import { useTrackPlayerFavorite } from "@/hooks/useTrackPlayerFavorite"
 const PlayerScreen = () => {
     const activeTrack = useActiveTrack()
 
-    const {isFavorite, toggleFavorite} = useTrackPlayerFavorite()
+    const isFavorite = false
+    const toggleFavorite = () => {}
 
     const {top, bottom} = useSafeAreaInsets()
 
