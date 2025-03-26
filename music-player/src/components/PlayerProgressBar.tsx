@@ -47,8 +47,12 @@ export const PlayerProgressBar = ({style}: ViewProps) => {
             }}
         />
 
-        <View>
+        <View style={styles.timeRow}>
             <Text style={styles.timeText}>{trackElapsedTime}</Text>
+
+            <Text style={styles.timeText}>
+                {'-'} {trackRenamingTime}
+            </Text>
         </View>
 
     </View>
