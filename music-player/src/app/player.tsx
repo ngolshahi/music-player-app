@@ -11,6 +11,7 @@ import { FontAwesome } from '@expo/vector-icons'
 import { PlayerControls } from "@/components/PlayerControls"
 import { PlayerProgressBar } from "@/components/PlayerProgressBar"
 import { PlayerVolumeBar } from "@/components/PlayerVolumeBar"
+import { PlayerRepeatToggle } from "@/components/PlayerRepeatToggle"
 
 const PlayerScreen = () => {
     const activeTrack = useActiveTrack()
