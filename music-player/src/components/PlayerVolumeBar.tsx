@@ -5,6 +5,7 @@ import { useSharedValue } from "react-native-reanimated";
 import { Ionicons } from '@expo/vector-icons'
 import { utilsStyles } from "@/styles";
 import { Slider } from "react-native-awesome-slider";
+import { useTrackPlayerVolume } from "@/hooks/useTrackPlayerVolume";
 
 export const PlayerVolumeBar = ({style}: ViewProps) => {
     const {volume, updateVolume} = useTrackPlayerVolume()
