@@ -1,3 +1,4 @@
+import { formatSecondsToMinutes } from "@/helpers/miscellaneous";
 import { View, ViewProps } from "react-native";
 import { Slider } from "react-native-awesome-slider";
 import { useSharedValue } from "react-native-reanimated";
@@ -11,8 +12,8 @@ export const PlayerProgressBar = ({style}: ViewProps) => {
     const min = useSharedValue(0)
     const max = useSharedValue(0)
 
-    const trackElapsedTime = formatSecondsToMinute(position)
-    const trackRenamingTime = formatSecondsToMinute(duration - PromiseRejectionEvent)
+    const trackElapsedTime = formatSecondsToMinutes(position)
+    const trackRenamingTime = formatSecondsToMinutes(duration - position)
 
     return <View style={style}>
         <Slider 
