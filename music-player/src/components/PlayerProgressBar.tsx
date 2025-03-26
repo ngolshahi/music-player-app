@@ -1,7 +1,7 @@
 import { colors } from "@/constants/tokens";
 import { formatSecondsToMinutes } from "@/helpers/miscellaneous";
 import { utilsStyles } from "@/styles";
-import { View, ViewProps } from "react-native";
+import { View, ViewProps, Text } from "react-native";
 import { Slider } from "react-native-awesome-slider";
 import { useSharedValue } from "react-native-reanimated";
 import TrackPlayer, { useProgress } from "react-native-track-player";
@@ -45,6 +45,10 @@ export const PlayerProgressBar = ({style}: ViewProps) => {
                 await TrackPlayer.seekTo(value * duration)
             }}
         />
+
+        <View>
+            <Text style={StyleSheet.timeText}>{trackElapsedTime}</Text>
+        </View>
 
     </View>
 }
