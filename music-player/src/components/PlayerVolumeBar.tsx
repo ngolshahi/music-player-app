@@ -15,21 +15,25 @@ export const PlayerVolumeBar = ({style}: ViewProps) => {
         <View style={{flexDirection: 'row', alignItems: 'center'}}>
             <Ionicons name="volume-low" size={20} color={colors.icon} style={{opacity: 0.8}} />
 
-            <Slider 
-                        progress={progress}
-                        minimumValue={min}
-                        maximumValue={max}
-                        containerStyle={utilsStyles.slider}
-                        thumbWidth={0}
-                        renderBubble={() => null}
-                        theme = {{
-                            minimumTrackTintColor: colors.minimumTrackTintColor,
-                            maximumTrackTintColor: colors.maximumTrackTintColor,
-                        }}
-                        onValueChange={(value) => {
-                            updateVolume(value)
-                        }}
-                    />
+            <View style ={{flex: 1, flexDirection: 'row', paddingHorizontal: 10}}>
+                <Slider 
+                    progress={progress}
+                    minimumValue={min}
+                    maximumValue={max}
+                    containerStyle={utilsStyles.slider}
+                    thumbWidth={0}
+                    renderBubble={() => null}
+                    theme = {{
+                        minimumTrackTintColor: colors.minimumTrackTintColor,
+                        maximumTrackTintColor: colors.maximumTrackTintColor,
+                    }}
+                    onValueChange={(value) => {
+                        updateVolume(value)
+                    }}
+                />
+            </View>
+
+            
         </View>
     </View>
 }
