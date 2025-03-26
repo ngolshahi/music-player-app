@@ -12,6 +12,7 @@ import { PlayerControls } from "@/components/PlayerControls"
 import { PlayerProgressBar } from "@/components/PlayerProgressBar"
 import { PlayerVolumeBar } from "@/components/PlayerVolumeBar"
 import { PlayerRepeatToggle } from "@/components/PlayerRepeatToggle"
+import { useTrackPlayerFavorite } from "@/hooks/useTrackPlayerFavorite"
 
 const PlayerScreen = () => {
     const activeTrack = useActiveTrack()
