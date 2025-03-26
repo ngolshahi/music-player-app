@@ -10,7 +10,7 @@ export const PlayerProgressBar = ({style}: ViewProps) => {
     const isSliding = useSharedValue(false)
     const progress = useSharedValue(0)
     const min = useSharedValue(0)
-    const max = useSharedValue(0)
+    const max = useSharedValue(1)
 
     const trackElapsedTime = formatSecondsToMinutes(position)
     const trackRenamingTime = formatSecondsToMinutes(duration - position)
@@ -21,7 +21,9 @@ export const PlayerProgressBar = ({style}: ViewProps) => {
 
     return <View style={style}>
         <Slider 
-            progress={0}
+            progress={progress}
+            minimumValue={min}
+            maximumValue={max}
         />
 
     </View>
