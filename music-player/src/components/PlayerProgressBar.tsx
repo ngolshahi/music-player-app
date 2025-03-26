@@ -37,6 +37,13 @@ export const PlayerProgressBar = ({style}: ViewProps) => {
             onValueChange={async(value) => {
                 await TrackPlayer.seekTo(value * duration)
             }}
+            onSlidingComplete={async(value) => {
+                if(!isSliding.value) return
+
+                isSliding.value = false
+
+                await TrackPlayer.seekTo(value * duration)
+            }}
         />
 
     </View>
