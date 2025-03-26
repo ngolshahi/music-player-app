@@ -7,6 +7,7 @@ import { utilsStyles } from "@/styles";
 import { Slider } from "react-native-awesome-slider";
 
 export const PlayerVolumeBar = ({style}: ViewProps) => {
+    const {volume, updateVolume} = useTrackPlayerVolume()
     const progress = useSharedValue(0)
     const min = useSharedValue(0)
     const max = useSharedValue(1)
