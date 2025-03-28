@@ -18,7 +18,7 @@ export const PlayerControls = ({ style }: PlayerControlsProps) => {
 			<View style={styles.row}>
 				<SkipToPreviousButton />
 
-            <PlayPauseButton/>
+				<PlayPauseButton />
 
             <SkipToNextButton/>
         </View>
