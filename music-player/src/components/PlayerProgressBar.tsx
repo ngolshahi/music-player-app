@@ -46,9 +46,9 @@ export const PlayerProgressBar = ({ style }: ViewProps) => {
 
 					isSliding.value = false
 
-                await TrackPlayer.seekTo(value * duration)
-            }}
-        />
+					await TrackPlayer.seekTo(value * duration)
+				}}
+			/>
 
         <View style={styles.timeRow}>
             <Text style={styles.timeText}>{trackElapsedTime}</Text>
