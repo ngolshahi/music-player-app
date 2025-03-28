@@ -23,24 +23,26 @@ export const PlayerProgressBar = ({ style }: ViewProps) => {
 		progress.value = duration > 0 ? position / duration : 0
 	}
 
-    return <View style={style}>
-        <Slider 
-            progress={progress}
-            minimumValue={min}
-            maximumValue={max}
-            containerStyle={utilsStyles.slider}
-            thumbWidth={0}
-            renderBubble={() => null}
-            theme = {{
-                minimumTrackTintColor: colors.minimumTrackTintColor,
-                maximumTrackTintColor: colors.maximumTrackTintColor,
-            }}
-            onSlidingStart={() => (isSliding.value = true)}
-            onValueChange={async(value) => {
-                await TrackPlayer.seekTo(value * duration)
-            }}
-            onSlidingComplete={async(value) => {
-                if(!isSliding.value) return
+	return (
+		<View style={style}>
+			<Slider
+				progress={progress}
+				minimumValue={min}
+				maximumValue={max}
+				containerStyle={utilsStyles.slider}
+				thumbWidth={0}
+				renderBubble={() => null}
+				theme={{
+					minimumTrackTintColor: colors.minimumTrackTintColor,
+					maximumTrackTintColor: colors.maximumTrackTintColor,
+				}}
+				onSlidingStart={() => (isSliding.value = true)}
+				onValueChange={async (value) => {
+					await TrackPlayer.seekTo(value * duration)
+				}}
+				onSlidingComplete={async (value) => {
+					// if the user is not sliding, we should not update the position
+					if (!isSliding.value) return
 
                 isSliding.value = false
 
