@@ -20,9 +20,10 @@ export const PlayerControls = ({ style }: PlayerControlsProps) => {
 
 				<PlayPauseButton />
 
-            <SkipToNextButton/>
-        </View>
-    </View>
+				<SkipToNextButton />
+			</View>
+		</View>
+	)
 }
 
 export const PlayPauseButton = ({style, iconSize}: PlayerButtonProps) => {
