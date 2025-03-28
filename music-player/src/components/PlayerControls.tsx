@@ -58,12 +58,12 @@ export const SkipToPreviousButton = ({ iconSize = 30 }: PlayerButtonProps) => {
 }
 
 const styles = StyleSheet.create({
-    container: {
-        width: '100%',
-    },
-    row: {
-        flexDirection: 'row',
-        justifyContent: 'space-evenly',
-        alignItems: 'center',
-    },
+	container: {
+		width: '100%',
+	},
+	row: {
+		flexDirection: 'row',
+		justifyContent: 'space-evenly',
+		alignItems: 'center',
+	},
 })
