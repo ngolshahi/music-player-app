@@ -14,8 +14,10 @@ export const PlayerProgressBar = ({ style }: ViewProps) => {
 	const min = useSharedValue(0)
 	const max = useSharedValue(1)
 
-    const trackElapsedTime = formatSecondsToMinutes(position)
-    const trackRenamingTime = formatSecondsToMinutes(duration - position)
+	const trackElapsedTime = formatSecondsToMinutes(position)
+	const trackRemainingTime = formatSecondsToMinutes(
+        Math.max(0, duration - position)
+    )
 
     if (!isSliding.value) {
         progress.value = duration > 0 ? position / duration : 0
