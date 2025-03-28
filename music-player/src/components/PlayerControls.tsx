@@ -4,7 +4,7 @@ import { StyleSheet, TouchableOpacity, View, ViewStyle } from 'react-native'
 import TrackPlayer, { useIsPlaying } from 'react-native-track-player'
 
 type PlayerControlsProps = {
-    style?: ViewStyle
+	style?: ViewStyle
 }
 
 type PlayerButtonProps = {
