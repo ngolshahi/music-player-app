@@ -8,8 +8,8 @@ type PlayerControlsProps = {
 }
 
 type PlayerButtonProps = {
-    style?: ViewStyle
-    iconSize?: number
+	style?: ViewStyle
+	iconSize?: number
 }
 
 export const PlayerControls = ({style} : PlayerControlsProps) => {
