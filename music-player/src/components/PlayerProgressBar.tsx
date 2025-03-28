@@ -19,9 +19,9 @@ export const PlayerProgressBar = ({ style }: ViewProps) => {
         Math.max(0, duration - position)
     )
 
-    if (!isSliding.value) {
-        progress.value = duration > 0 ? position / duration : 0
-    }
+	if (!isSliding.value) {
+		progress.value = duration > 0 ? position / duration : 0
+	}
 
     return <View style={style}>
         <Slider 
