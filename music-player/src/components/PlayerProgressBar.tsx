@@ -44,7 +44,7 @@ export const PlayerProgressBar = ({ style }: ViewProps) => {
 					// if the user is not sliding, we should not update the position
 					if (!isSliding.value) return
 
-                isSliding.value = false
+					isSliding.value = false
 
                 await TrackPlayer.seekTo(value * duration)
             }}
