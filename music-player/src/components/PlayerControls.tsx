@@ -26,8 +26,8 @@ export const PlayerControls = ({ style }: PlayerControlsProps) => {
 	)
 }
 
-export const PlayPauseButton = ({style, iconSize}: PlayerButtonProps) => {
-    const {playing} = useIsPlaying()
+export const PlayPauseButton = ({ style, iconSize = 48 }: PlayerButtonProps) => {
+	const { playing } = useIsPlaying()
 
     return <View style={[{height: iconSize}, style]}>
         <TouchableOpacity activeOpacity={0.85} onPress={playing ? TrackPlayer.pause : TrackPlayer.play}>
